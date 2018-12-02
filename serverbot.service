@@ -1,0 +1,16 @@
+[Unit]
+Description = telegram server bot
+After = network.target
+
+[Service]
+Environment=BOT_ADMIN="CHANGEME"
+Environment=BOT_PASSCODE="CHANGEME"
+Environment=BOT_TOKEN="CHANGEME"
+Environment=BOT_UID="CHANGEME"
+
+ExecStart = /usr/local/bin/bot.py
+Restart = always
+
+[Install]
+WantedBy = multi-user.target
+
